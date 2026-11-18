@@ -88,7 +88,7 @@
 
 ---
 
-## PHẦN 3: LỜI GIẢI CÁC BÀI TẬP CUỐI BÀI (EXERCISES)
+## LỜI GIẢI CÁC BÀI TẬP CUỐI BÀI (EXERCISES)
 
 Toàn bộ mã nguồn CQL đã được lưu tại file `D:\.A-Courses\Y3\A-DB\Lab\exercises.cql` và kiểm thử trực tiếp trên cluster:
 
