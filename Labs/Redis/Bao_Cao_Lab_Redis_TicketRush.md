@@ -23,6 +23,3 @@
 - **Thời điểm ghi:** Ghi xuống PostgreSQL/MySQL trong giao dịch thanh toán khi chuyển từ giữ ghế sang xác nhận bán (`confirm` / bước hoàn tất thanh toán). Nếu Redis bị restart hoặc mất dữ liệu ngay sau `confirm` mà chưa kịp ghi xuống DB quan hệ (vì RDB/AOF vẫn có thể mất vài giây dữ liệu gần nhất), khách đã trả tiền nhưng mất vé hoặc ghế bị mở bán lại; do đó cần ghi bền vững vào PostgreSQL/MySQL trước khi báo đặt vé thành công (hoặc đồng bộ qua giao dịch/outbox), còn Redis chỉ giữ vai trò lớp tăng tốc và khóa tạm thời.
 
 ---
-
-Ex 3 Cache-aside (100 reqs): no_cache=5.052s, with_cache=0.1018s, speedup=49.6x
-```
